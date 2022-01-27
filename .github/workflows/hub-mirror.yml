@@ -21,7 +21,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
       - name: print env
-        run: echo ${{ secrets.DOCKERHUB_USERNAME }} && echo '...' && echo ${{ env.DOCKERHUB_USERNAME }} && echo ${{ env.username }}
+        run: echo ${{ secrets.DOCKERHUB_USERNAME }} && echo '...' && echo ${{ env.DOCKERHUB_USERNAME }} && echo ${{ env.docker.USERNAME }} && echo ${{ env.docker.username }}
       # 2. 设置 go 环境
       - name: Setup go
         uses: actions/setup-go@v2
