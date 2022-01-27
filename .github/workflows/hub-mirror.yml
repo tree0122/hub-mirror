@@ -20,6 +20,8 @@ jobs:
       # 1. 切换分支（默认主分支）
       - name: Check out code
         uses: actions/checkout@v2
+      - name: print env
+        run: ${{ secrets }} ... ${{ env }}
       # 2. 设置 go 环境
       - name: Setup go
         uses: actions/setup-go@v2
